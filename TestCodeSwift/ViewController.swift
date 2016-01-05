@@ -45,13 +45,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         cell.textLabelDemo.text = "cell \(indexPath.row)"
         cell.imageViewDemo.image = UIImage(named: "calendar-icons")
-        
-        if indexSelected == indexPath.row {
-            cell.imageViewDemo.hidden = true
-        } else {
-            cell.imageViewDemo.hidden = false
-        }
-        
+    
         
         return cell
     }
