@@ -58,19 +58,18 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
        
-//        if indexSelected != -1 {
-//            let oldCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: indexSelected, inSection: 0)) as! CustomDemoTableViewCell
-//            oldCell.imageViewDemo.hidden = false
-//        }
+        if indexSelected != -1 {
+            let oldCell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: indexSelected, inSection: 0)) as! CustomDemoTableViewCell
+            oldCell.imageViewDemo.hidden = false
+        }
         
         
         indexSelected = indexPath.row //update selected row
-//        let cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomDemoTableViewCell
-//        cell.imageViewDemo.hidden = true
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! CustomDemoTableViewCell
+        cell.imageViewDemo.hidden = true
         
-//        tableView.beginUpdates()
-//        tableView.endUpdates()
-        tableView.reloadData()
+        tableView.beginUpdates()
+        tableView.endUpdates()
     }
 }
 
